@@ -1,0 +1,65 @@
+copyright = "© Matheus Queiroz"
+defaultContentLanguage = "en"
+disableKinds = ["taxonomy"]
+enableRobotsTXT = true
+languageCode = "en"
+timeZone = "America/Sao_Paulo"
+timeout = "120s"
+title = "math-queiroz"
+
+[params]
+  enableDownload = false
+  headerLink = "https://math-queiroz.dev"
+
+  defaultTheme = "dark"
+  description = "Some random photos I took"
+  title = "My Gallery"
+  [params.author]
+    email = "math-queiroz@proton.me"
+    name = "Matheus Queiroz"
+  [params.socialIcons]
+    # facebook = "https://www.facebook.com/"
+    # instagram = "https://www.instagram.com/"
+    github = "https://github.com/math-queiroz"
+    # youtube = "https://www.youtube.com/"
+    email = "mailto:math-queiroz@proton.me"
+    #website = "https://example.com"
+    #mastodon = "https://example.com"
+    #pixelfed = "https://example.com"
+    #mixcloud = "https://example.com"
+    #flickr = "https://www.flickr.com"
+    #500px = "https://500px"
+    #whatsapp = "1234567890"
+  [params.gallery]
+    boxSpacing = 10
+    #targetRowHeight = 288
+    #targetRowHeightTolerance = 0.25
+
+[outputs]
+  home = ["HTML", "RSS"]
+  page = ["HTML"]
+  section = ["HTML"]
+
+[imaging]
+  quality = 75
+  resampleFilter = "CatmullRom"
+  [imaging.exif]
+    disableDate = false
+    disableLatLong = true
+    includeFields = "ImageDescription|Orientation"
+
+[module]
+  [module.hugoVersion]
+    min = "0.121.2"
+  [[module.imports]]
+    path = "hugo-theme-gallery"
+
+[menu]
+  [[menu.footer]]
+    name = "Hugo Theme"
+    url = "https://github.com/math-queiroz/hugo-theme-gallery-minimal/"
+    weight = 3
+
+[services]
+  [services.rss]
+    limit = 100
